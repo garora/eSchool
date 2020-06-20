@@ -19,7 +19,6 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionStrings=Server=sql.data;Database=OpenCodeFoundation.EnrollingDb;User Id=sa;Password=Pass@word
-      - Serilog__MinimumLevel__Override__OpenCodeFoundation=Verbose
     ports:
       - "5102:80"
       - "5581:5001"

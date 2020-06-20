@@ -20,15 +20,15 @@ namespace OpenCodeFoundation.ESchool.Services.Enrolling.API.Application.Behavior
             CancellationToken cancellationToken,
             RequestHandlerDelegate<TResponse> next)
         {
-            _logger.LogDebug(
-                "Handling command {CommandName} ({@Command})",
+            _logger.LogInformation(
+                "Handling request {RequestName} ({@Request})",
                 request.GetType().Name,
                 request);
 
             var response = await next();
 
-            _logger.LogDebug(
-                "Command {CommandName} handled. Response: {@Response}",
+            _logger.LogInformation(
+                "Request {RequestName} handled. Response: {@Response}",
                 request.GetType().Name,
                 response);
 
