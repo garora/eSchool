@@ -41,11 +41,6 @@ namespace OpenCodeFoundation.ESchool.Services.Enrolling.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] EnrollmentApplicationCommand command)
         {
-            _logger.LogInformation(
-                "Sending command: {CommandName} - ({@Command})",
-                command.GetType().Name,
-                command);
-
             await _mediator.Send(command);
             return Ok();
         }
